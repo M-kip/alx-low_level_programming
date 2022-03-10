@@ -8,3 +8,4 @@ C Programming
 * 1-compiler     Bash script that compiles the c source code
 * 2-assembler	Bash script that compiles and assbles the c source code
 * 3-name 	Bash script to create a c executable named cisfun
+* 4-puts.c 	C program that prints to the console using puts funtion
