@@ -4,6 +4,11 @@
  * The puts function
  */
 
+/**
+ * main: prints to screen using puts function
+ *
+ * return 0 if successfull else 1
+ */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
