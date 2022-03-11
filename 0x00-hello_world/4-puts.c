@@ -5,8 +5,9 @@
  */
 
 /**
- * main: prints to screen using puts function
+ * main - prints to screen using puts function
  *
+ * Description: prints to screen using puts function
  * return 0 if successfull else 1
  */
 int main(void)
