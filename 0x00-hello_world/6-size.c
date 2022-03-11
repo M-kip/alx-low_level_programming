@@ -1,22 +1,25 @@
+  
 #include <stdio.h>
 
-/*
- * Program to print the sizes of c data types
- * It uses the sizeof function
- */
-
 /**
- * main - Print data types size in bytes
+ * main - Entry point
  *
- * Description: print data types sizes using the sizeof function
- * Return: 0 if the program executed successfully else 1
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	printf("Size of a char: %d byte(s)\n", sizeof(char));
-	printf("Size of an int: %d byte(s)\n", sizeof(int));
-	printf("Size of a long int: %d byte(s)\n", sizeof(long int));
-	printf("Size of a long long int: %d byte(s)\n", sizeof(long long int));
-	printf("Size of float: %d byte(s)\n", sizeof(float));
+
+	char c;
+	int d;
+	long int ld;
+	long long int lld;
+	float f;
+
+	printf("Size of a char: %lu byte(s)\n", (unsigned long)sizeof(c));
+	printf("Size of an int: %lu byte(s)\n", (unsigned long)sizeof(d));
+	printf("Size of a long int: %lu byte(s)\n", (unsigned long)sizeof(ld));
+	printf("Size of a long long int: %lu byte(s)\n", (unsigned long)sizeof(lld));
+	printf("Size of a float: %lu byte(s)\n", (unsigned long)sizeof(f));
+
 	return (0);
 }
