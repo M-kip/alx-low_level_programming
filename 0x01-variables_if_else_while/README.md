@@ -16,3 +16,4 @@
 | 2-print_alphabet.c | Print the alphabet using putchar|
 | 3-print_alphabets.c | Prints lowercase and uppercase alphabets |
 | 4-print_alphabt.c | Prints the alphabet excluding e and q |
+| 5-print_numbers.c | Prints single digits of base 10 |
