@@ -8,7 +8,7 @@
  */
 
 /**
- * function - prints a random number
+ * main - prints a random number
  *
  * Description: Uses random generator to print a
  * number to the screen
