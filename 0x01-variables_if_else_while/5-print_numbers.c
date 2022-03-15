@@ -9,8 +9,8 @@
  * main - print all the single digits of base 10
  *
  * Description: prints all the single digits
- * 10 
- * Return: 0 is successful 
+ * 10
+ * Return: 0 is successful
  */
 
 int main(void)
