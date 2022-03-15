@@ -7,7 +7,7 @@
 
 /**
  * main - print all the single digits of base 16
- * 
+ *
  * Description: prints all the single digits
  * 16
  * Return: 0 is successful
