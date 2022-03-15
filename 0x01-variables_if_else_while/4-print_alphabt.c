@@ -12,7 +12,7 @@
  *
  * Description: prints the alphabet using
  * putchar function
- * Return: 0 if successfull else 1
+ * Return: 0 if successful else 1
  */
 
 int main(void)
