@@ -18,3 +18,4 @@
 | 4-print_alphabt.c | Prints the alphabet excluding e and q |
 | 5-print_numbers.c | Prints single digits of base 10 |
 | 6-print_numberz.c | Prints single digits of base 10 using putchar func |
+| 7-print_tebahpla.c | Prints the alphabet in reverse |
