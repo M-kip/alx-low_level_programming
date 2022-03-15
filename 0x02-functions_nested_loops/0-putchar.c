@@ -1,8 +1,8 @@
 /*
  * program to print _putchar
- * Author Moses kiprono 
+ * Author Moses kiprono
  */
-#include "main.h" 
+#include "main.h"
 
 /**
  * main - program to print putchar
@@ -13,7 +13,8 @@
 int main(void)
 {
 	char msg[] = "_putchar";
-	int a;	
+	int a;
+
 	for (a = 0; a <= 7; a++)
 	{
 		_putchar(msg[a]);
