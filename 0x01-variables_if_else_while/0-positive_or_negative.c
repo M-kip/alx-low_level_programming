@@ -3,8 +3,9 @@
 #include <stdio.h>
 
 /**
- * function - prints a random number 
- * Description: uses random generator to print a
+ * function - prints a random number
+ *
+ * Description: Uses random generator to print a
  * number to the screen
  * Return: return 0 if successful else 1
  */
