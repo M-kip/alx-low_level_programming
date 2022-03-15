@@ -15,7 +15,9 @@
 
 int main(void)
 {
-	for (int a = 0; a <= 9; a++)
+	int a;
+
+	for (a = 0; a <= 9; a++)
 		printf("%d", a);
 	printf("\n");
 }
