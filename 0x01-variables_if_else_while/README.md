@@ -20,3 +20,4 @@
 | 6-print_numberz.c | Prints single digits of base 10 using putchar func |
 | 7-print_tebahpla.c | Prints the alphabet in reverse |
 | 8-print_base16.c | Prints all the numbers of base 16 |
+| 9-print_comb.c | Prints all the numbers comma separate |
