@@ -23,7 +23,7 @@ int main(void)
 	{
 		if (a == 101 || a == 113)
 		{
-			continue; 
+			continue;
 		}
 		else
 			putchar(a);
