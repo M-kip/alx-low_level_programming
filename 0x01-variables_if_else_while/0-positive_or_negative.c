@@ -3,8 +3,7 @@
 #include <stdio.h>
 
 /**
- * function - prints a random number
- * 
+ * function - prints a random number 
  * Description: uses random generator to print a
  * number to the screen
  * Return: return 0 if successful else 1
@@ -15,11 +14,11 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if ( n > 0 )
+	if (n > 0)
 	{
 		printf("%d is positive\n", n);
 	}
-	else if ( n < 0)
+	else if (n < 0)
 	{
 		printf("%d is negative\n", n);
 	}
