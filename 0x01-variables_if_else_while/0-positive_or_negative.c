@@ -1,6 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+/*
+ * Function that prints a random number
+ * Author Moses kiprono
+ * Date: 15 march 2022
+ */
 
 /**
  * function - prints a random number
