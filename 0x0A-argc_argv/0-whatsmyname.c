@@ -8,15 +8,16 @@
 /**
  * main - Print program name
  * @argc: argument counter
- * @argcv: argument vector
+ * @argv: argument vector
  *
- * return: int
+ * Description: program that prints its name
+ * Return: int
  */
 
 int main(int argc, char *argv[])
 {
 	(void)argc;
 	printf("%s\n", argv[0]);
-	
+
 	return (0);
 }
