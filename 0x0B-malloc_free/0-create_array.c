@@ -13,14 +13,18 @@
 char *create_array(unsigned int size, char c)
 {
 	char *ptr = (char *)malloc(size * sizeof(char));
+	int x;
 
-	unsigned int x;
+	if (ptr == NULL)
+	{
+		return (ptr);
+	}
 
-	for ( x = 0; x < size; x++)
+	for (x = 0; x < size; x++)
 	{
 		ptr[x] = c;
 	}
 
-	return (ptr);
+	return (0);
 }
 
