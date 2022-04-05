@@ -1,0 +1,2 @@
+0-create_array:
+	gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-main.c 0-create_array.c -o a
