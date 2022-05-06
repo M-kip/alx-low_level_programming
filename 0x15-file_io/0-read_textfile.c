@@ -14,7 +14,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	char *buf;
-	ssize_t n, m, nm = 0;
+	ssize_t n, m;
 
 	buf = malloc(letters * sizeof(char));
 	if (buf == NULL)
@@ -24,13 +24,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDONLY, 0);
 	if (fd == -1)
 		return (0);
-	while ((m = read(fd, buf, letters)) > 0)
-	{
-		n = write(STDOUT_FILENO, buf, m);
-		if (n != m || n == -1)
-			return (0);
-		nm += n;
-	}
+	m = read(fd, buf, letters);
+	n = write(STDOUT_FILENO, buf, m);
+	if (n != m || n == -1)
+		return (0);
 
-	return (nm);
+	return (n);
 }
