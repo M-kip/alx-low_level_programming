@@ -1,8 +1,8 @@
 ## ALX SE Program
 
-## 0x15-file_io project
+### 0x15-file_io
 
-## Learning Objectives
+### Learning Objectives
 
 > Look for the right source of information online<br>
 > How to create, open, close, read and write files<br>
@@ -14,7 +14,14 @@
 > What is a system call<br>
 > What is the difference between a function and a system call<br>
 
+-----
+### Create executable 
+gcc -Wall -pedantic -Werror -Wextra -std=gnu89 'file_name' -o 'executable'
+
+### source code
+
 | FILE | DESCRIPTION |
 | ---- | ----------- |
 | 0-read_textfile.c | reads text from a file and prints to std output |
 | 1-create_file.c | creates a file with the right perms |
+| main.h | file containing function descriptions and symbolic constants |
