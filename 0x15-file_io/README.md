@@ -14,4 +14,6 @@ What are file permissions, and how to set them when creating a file with the ope
 What is a system call
 What is the difference between a function and a system call
 
-
+| FILE | DESCRIPTION |
+| ---- | ----------- |
+| 0-read_textfile.c | reads text from a file and prints to std output |
