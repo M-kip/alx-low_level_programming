@@ -60,7 +60,9 @@ int main(int argc, char **argv)
 		exit(97);
 	}
 	file_from = open(argv[1], O_RDONLY);
-	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	file_to = open(argv[2], O_WRONLY | O_TRUNC);
+	if (file_to == -1)
+		file_to = open(argv[2], O_WRONLY | O_CREAT, 0664); 
 	buf = create_buf(BUFSIZE);
 	while ((n = read(file_from, buf, BUFSIZE)) > 0)
 	{
