@@ -12,7 +12,7 @@
 int create_file(const char *filename, char *text_content)
 {
 
-	int fd;
+	int fd, len;
 	int n;
 
 	if (filename == NULL)
@@ -25,11 +25,13 @@ int create_file(const char *filename, char *text_content)
 	}
 	else if (text_content != NULL)
 	{
+		for (len = 0; text_content[len]; len++)
+			;
 		fd = creat(filename, PERMS);
 		if (fd == -1)
 			return (-1);
-		n = write(fd, text_content, _strlen(text_content));
-		if (n != (int) _strlen(text_content) || n == -1)
+		n = write(fd, text_content, len);
+		if (n != len || n == -1)
 			return (-1);
 	}
 
