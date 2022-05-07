@@ -64,7 +64,8 @@ int main(int argc, char **argv)
 	if (file_to == -1)
 		file_to = open(argv[2], O_WRONLY | O_CREAT, 0664); 
 	buf = create_buf(BUFSIZE);
-	while ((n = read(file_from, buf, BUFSIZE)) > 0)
+	n = read(file_from, buf, BUFSIZE);
+	do
 	{
 		if (file_from == -1 || n == -1)
 		{
@@ -79,7 +80,7 @@ int main(int argc, char **argv)
 			free(buf);
 			exit(99);
 		}
-	}
+	}while ((n = read(file_from, buf, BUFSIZE)) > 0);
 	free(buf);
 	close_file(file_from);
 	close_file(file_to);
