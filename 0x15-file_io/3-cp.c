@@ -21,6 +21,25 @@ char *create_buf(int size)
 	return (buf);
 }
 /**
+ * _cp - copy file 1 to file 2
+ * @file_from: the file to copy from
+ * @file_to: destination file
+ *
+ * Description: copies contents of file 1
+ * to file 2
+ *
+ * Return: void
+ */
+void _cp(int file_from, int file_to)
+{
+	char *buf;
+	int n;
+
+	buf = create_buf(BUFSIZE);
+	while ((n = read(file_from, buf, BUFSIZE)) > 0)
+		write(file_to, buf, n);
+}
+/**
  * main - function to copy content from one file to another
  * @argc: number of arguments
  * @argv: command line arguments
@@ -32,20 +51,18 @@ char *create_buf(int size)
  */
 int main(int argc, char **argv)
 {
-	char *buf;
-	int n, m, file_from, file_to;
+	int file_from, file_to;
 
 	if (argc != 3)
 	{
-		dprintf(2, "usage: %s file_from file_to", argv[0]);
-		exit(EXIT_FAILURE);
+		dprintf(2, "usage: %s file_from file_to\n", argv[0]);
+		exit(97);
 	}
-	buf = create_buf(BUFSIZE);
 	file_from = open(argv[1], O_RDONLY);
 	if (file_from == -1)
 	{
-		dprintf(2, "Error:cannot read from file  %s", argv[1]);
-		exit(97);
+		dprintf(2, "Error:cannot read from file  %s\n", argv[1]);
+		exit(98);
 	}
 	file_to = open(argv[2], O_WRONLY);
 	if (file_to == -1)
@@ -57,17 +74,16 @@ int main(int argc, char **argv)
 			exit(99);
 		}
 	}
-	while ((n = read(file_from, buf, BUFSIZE)) > 0)
+	_cp(file_from, file_to);
+	if (close(file_from))
 	{
-		m = write(file_to, buf, n);
-		if (m != n || m == -1)
-		{
-			dprintf(2, "Error: cannot write to file %s\n", argv[2]);
-			return (98);
-		}
+		dprintf(2, "Error: Can't close fd %d\n", file_from);
+		exit(100);
 	}
-
-	close(file_from);
-	close(file_to);
+	if (close(file_to))
+	{
+		dprintf(2, "Error: Can't close fd %d\n", file_to);
+		exit(100);
+	}
 	return (1);
 }

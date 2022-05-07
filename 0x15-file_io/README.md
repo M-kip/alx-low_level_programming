@@ -25,3 +25,5 @@ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 'file_name' -o 'executable'
 | 0-read_textfile.c | reads text from a file and prints to std output |
 | 1-create_file.c | creates a file with the right perms |
 | main.h | file containing function descriptions and symbolic constants |
+| 2-append_text_to_file.c | appends text to a file if the file does not exist a new file is created with the right perms |
+| 3-cp.c | copies file 1 contents to file 2 (dest) |
