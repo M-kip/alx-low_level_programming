@@ -62,17 +62,16 @@ int main(int argc, char **argv)
 	file_from = open(argv[1], O_RDONLY);
 	file_to = open(argv[2], O_WRONLY | O_TRUNC);
 	if (file_to == -1)
-		file_to = open(argv[2], O_WRONLY | O_CREAT, 0664); 
+		file_to = open(argv[2], O_WRONLY | O_CREAT, 0664);
 	buf = create_buf(BUFSIZE);
 	n = read(file_from, buf, BUFSIZE);
-	do
-	{
+	do {
 		if (file_from == -1 || n == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			free(buf);
 			exit(98);
-		} 
+		}
 		m = write(file_to, buf, n);
 		if (file_to == -1 || m == -1)
 		{
@@ -80,7 +79,7 @@ int main(int argc, char **argv)
 			free(buf);
 			exit(99);
 		}
-	}while ((n = read(file_from, buf, BUFSIZE)) > 0);
+	} while ((n = read(file_from, buf, BUFSIZE)) > 0);
 	free(buf);
 	close_file(file_from);
 	close_file(file_to);
