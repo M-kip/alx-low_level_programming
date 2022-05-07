@@ -16,7 +16,7 @@ char *create_buf(int size)
 	if (!buf)
 	{
 		dprintf(STDERR_FILENO, "Error: failed to create buffer\n");
-		exit(EXIT_FAILURE);
+		exit(99);
 	}
 	return (buf);
 }
