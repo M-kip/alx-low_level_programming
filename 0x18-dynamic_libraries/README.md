@@ -7,6 +7,11 @@
 - What are the differences between static and shared libraries
 - Basic usage nm, ldd, ldconfig
 
+### Technologies
+- gcc
+        ** gcc options ** -Wall -Werror -Wextra -pedantic -std=gnu89
+- make
+- Tested in  Ubuntu 20.04 LTS 
 ### FILES
 | FILE | DESCRIPTION |
 | ---- | ----------- |
