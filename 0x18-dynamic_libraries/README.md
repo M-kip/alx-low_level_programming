@@ -15,4 +15,6 @@
 | source2.c | Defines the various functions in the main.h file |
 | source3.c | Defines the various functions in the main.h file |
 | source4.c | Defines the various functions in the main.h file |
+|100-operations.so | dynamic library |
+|1-create_dynamic_lib.sh | Script to create a dynamic library |
 
