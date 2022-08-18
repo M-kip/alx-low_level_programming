@@ -3,5 +3,5 @@ CC=gcc
 SRC=main.c school.c
 OBJ=
 
-all: main.c school.c
-	gcc -o $(NAME) $(SRC)
+all: $(SRC)
+	gcc -o school $(SRC)
