@@ -12,3 +12,4 @@ and how the learner can implement a Makefile in a project
 | ----- | ----------- |
 | 0-Makefile | Describes the all target used to compile the whole project |
 | 1-Makefile | Make file variable definations |
+| 2-Makefile | This makefile defines some important variables used for automation |
