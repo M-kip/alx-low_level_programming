@@ -8,7 +8,7 @@ RM=rm -f
 	$(CC) -c -o $@ $<
 
 all: $(OBJ)
-	gcc $(OBJ) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 
 clean:
 	$(RM) *~ $(NAME)
