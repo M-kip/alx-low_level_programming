@@ -17,9 +17,9 @@ def island_perimeter(grid):
         returns: perimeter
     """
 
-    perimeter = 0
     nrows = len(grid)
     ncolumns = len(grid[0])
+    cells = 0
 
     for x in range(nrows):
         for y in range(ncolumns):
@@ -40,10 +40,14 @@ def island_perimeter(grid):
 
             if val:
                 if prev or up:
-                    perimeter += 1
+                    cells += 1
                 elif next_ or down:
-                    perimeter += 1
+                    cells += 1
                 else:
-                    perimeter += 1
-
-    return perimeter
+                    cells += 1
+    if cells == 0:
+        return cells
+    elif cells == 1:
+        return cells *4
+    elif cells > 1:
+        return (cells*2) + 2
