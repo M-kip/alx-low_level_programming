@@ -4,7 +4,7 @@ OBJ=$(SRC:%.c=%.o)
 CC=gcc
 RM=rm -f 
 
-%.c: %.c m.h
+%.o: %.c m.h
 	$(CC) -c -o $@ $<
 
 all: $(OBJ)
