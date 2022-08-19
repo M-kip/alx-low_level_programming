@@ -20,14 +20,22 @@ def island_perimeter(grid):
     perimeter = 0
     nrows = len(grid)
     ncolumns = len(grid[0])
+    prev = 0
+    next_ = 0
+    up = 0
+    down = 0
 
     for x in range(nrows):
         for y in range(ncolumns):
             val = grid[x][y]
-            prev = grid[x][y-1]
-            next_ = grid[x][y+1]
-            up = grid[x-1][y]
-            down = grid[x+1][y]
+            if not ((y+1) > ncolumns):
+                next_ = grid[x][y+1]
+            if not ((y-1) < 0):
+                prev = grid[x][y-1]
+            if not ((x-1) < nrows):
+                up = grid[x-1][y]
+            if not ((x+1) > nrows):
+                down = grid[x+1][y]
 
             if val:
                 if prev or next_:
