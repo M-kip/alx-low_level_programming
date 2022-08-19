@@ -5,15 +5,14 @@ CC=gcc
 RM=rm -f 
 
 all: $(OBJ)
-	gcc -o $(NAME) $(OBJ)
+	gcc $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) $(SRC:%.c=%.c~) $(NAME)
+	$(RM) *~ $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
  
 fclean: clean oclean
  
-re:
-	 oclean all
+re: oclean all
