@@ -8,12 +8,12 @@ all: $(OBJ)
 	gcc -o $(NAME) $(OBJ)
 
 clean:
-	$(RM) *~ $(NAME)
+	$(RM) $(SRC:%.c=%.c~) $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
  
 fclean: clean oclean
  
-re: $(SRC)
+re:
 	 oclean all
