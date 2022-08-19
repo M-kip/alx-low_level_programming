@@ -18,7 +18,8 @@ def island_perimeter(grid):
     """
 
     nrows = len(grid)
-    ncolumns = len(grid[0])
+    if grid != []:
+        ncolumns = len(grid[0])
     cells = 0
 
     for x in range(nrows):
@@ -39,15 +40,10 @@ def island_perimeter(grid):
                 down = grid[x+1][y]
 
             if val:
-                if prev or up:
+                if prev == 0 or next_ == 0:
                     cells += 1
-                elif next_ or down:
+                elif up == 0 or down == 0:
                     cells += 1
                 else:
                     cells += 1
-    if cells == 0:
-        return cells
-    elif cells == 1:
-        return cells *4
-    elif cells > 1:
-        return (cells*2) + 2
+    return cells
