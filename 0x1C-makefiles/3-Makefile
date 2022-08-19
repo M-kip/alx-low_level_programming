@@ -4,13 +4,13 @@ OBJ=$(SRC:%.c=%.o)
 CC=gcc
 RM=rm
 
-all: $(OBJ) 
+all: $(OBJ)
 	gcc -o $(NAME) $(OBJ)
-clean: $(NAME) $(SRC)
-	$(RM) $(NAME) $(SRC:%.c=%.c~) 
-oclean: $(OBJ)
-	$(RM) *.o
-fclean: $(NAME) $(OBJ) 
-	$(RM) $(NAME) *.o ./*.c
+clean:
+	$(RM) $(NAME) *~ 
+oclean: 
+	$(RM) $(OBJ) 
+fclean: 
+	clean oclean
 re: $(SRC)
-	$(CC) -c $(SRC)
+	oclean all
