@@ -42,4 +42,5 @@ def island_perimeter(grid):
                     perimeter += 1
                 elif up or down:
                     perimeter += 1
-    return (perimeter*2 + 2)
+
+    return perimeter
