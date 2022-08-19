@@ -4,6 +4,9 @@ OBJ=$(SRC:%.c=%.o)
 CC=gcc
 RM=rm -f 
 
+%.c: %.c m.h
+	$(CC) -c -o $@ $<
+
 all: $(OBJ)
 	gcc $(OBJ) -o $(NAME)
 
