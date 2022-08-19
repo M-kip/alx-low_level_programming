@@ -4,7 +4,7 @@ OBJ=$(SRC:%.c=%.o)
 CC=gcc
 RM=rm -f
 
-all: $(OBJ)
+all: $(SRC)
 	gcc -o $(NAME) $(OBJ)
 clean:
 	$(RM) $(NAME) *~ 
@@ -12,5 +12,5 @@ oclean:
 	$(RM) $(OBJ) 
 fclean: 
 	clean oclean
-re: $(SRC)
+re:
 	oclean all
