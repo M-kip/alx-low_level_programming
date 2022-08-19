@@ -52,3 +52,5 @@ def island_perimeter(grid):
             return cells * 4
         elif cells > 1:
             return (cells * 2) + 2
+    else:
+        return cells
